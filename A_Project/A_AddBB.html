@@ -1,0 +1,213 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="A_Index.css">
+        <link rel="stylesheet" href="A_AddBB.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <title>Line Age - A way to Minimize Blood Doner & Receivers</title>
+    </head>
+    <body>
+        <header>
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <div class="logo"><img src="img/logo.jpg" alt="logo">
+                <li><a href="A_Index.html">Home</a></li>
+                <li><a href="A_DLogin.html"> Login </a></li>
+                <li><a href="A_Reg.html">Registration</a></li>
+                <li><a href="A_Login.html">Admin</a></li>
+                <li><a href="A_About.html">About Us</a></li>
+                <li><a href="A_Contact.html">Contact Us</a></li>
+            </ul>
+            <div class="rightNav">
+                <input type="text" name="search" id="search">
+                <a href="https://www.google.com/"><button class="btn btn-sm">Search</button></a>
+            </div>
+        </nav>
+    </header>
+<section>
+    <div class="page-header">
+        <h3 class="text-danger">Blood Bank Details</h3>
+</div>
+
+<div class="container-box">
+    <div class="box-1">
+       <fieldset style="
+       padding: 22px 84px;
+       box-shadow: 3px 3px 5px grey;
+       color: darkred;
+       margin-top: 2em;
+       margin-bottom: 1em;">
+        <legend style=" font-size: 28px;">|Blood Bank Address|</legend>
+            <span class="details" style="color:darkred">State</span>
+            <font color="red">*</font>
+                <select>
+                    <option>Uttar Pradesh</option>
+                </select>
+        
+            <span class="details"style="color:darkred">District</span>
+            <font color="red">*</font>
+            <select>
+                <option>Varanasi</option>
+                <option>Mirzapur</option>
+            </select>
+            <span class="details" style="color:darkred">City</span>
+            <input type="text" name="" id="">
+        
+       </fieldset>
+       <fieldset style=" padding: 22px 84px; box-shadow: 3px 3px 5px grey;
+         color: darkred;margin-top: 2em; margin-bottom: 1em;">
+        <legend style="font-size: 28px; ">|Blood Bank Details|</legend>
+    <div class="user-details"></div>
+    <div class="input-details">
+        <label for="">Blood Bank Name</label>
+        <font color="red">*</font>
+        <input type="text" name="" id="">
+    
+        <label for=""style="margin-left: 60px;">Parent Hospital Name</label>
+        <font color="red">*</font>
+        <input type="text" name="" id="">
+    </div>
+        <span style="margin-left: 42px; color:darkred" >Short Name</span>
+        <font color="red">*</font>
+        <input type="text" name="" id="">
+        <span class="details" style="margin-left: 143px; color:darkred">Category</span>                  
+            <font color="red">*</font>
+            <select  style=" width: 27.7%;">
+                <option>Select Category</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select> 
+            <div class="input-details">
+            <label for="" style="margin-left: 22px;">Contact Person</label>
+            <font color="red">*</font>
+            <input type="text" name="" id="">
+            <label for="" style="margin-left: 164px;">Email</label>
+            <font color="red">*</font>
+            <input type="text" name="" id="">
+        </div>
+            <label for="Contact No."></label>
+            <label for=""style="margin-left: 80px;">Fax No.</label>
+            <input type="text" name="" id="">
+            <label for="" style="margin-left: 151px;">Licence</label>
+            <font color="red">*</font>
+            <input type="text" name="" id="">
+            <div class="input-details">
+            <label for=""style="margin-left: 50px;">From Date</label>
+            <font color="red">*</font>
+            <input type="date" name="" id="">
+            <label for=""style="margin-left: 152px;">To Date</label>
+            <font color="red">*</font>
+            <input type="date" name="" id=""> 
+        </div> 
+            <label for=""style="margin-left: 37px;">Helpline No.</label>                  
+            <font color="red">*</font>
+            <input type="text" name="" id="">
+            <label for=""style="margin-left: 78px;">No of Bed Hospital</label>                  
+            <font color="red">*</font>
+            <input type="text" name="" id="">
+            <div class="input-details">
+            <label for="" style="margin-left: 80px;">Website</label>       
+            <input type="text" name="" id="">
+        </div>
+       </fieldset>
+       <fieldset style=" padding: 22px 84px;box-shadow: 3px 3px 5px grey;
+       color: darkred; margin-top: 2em; margin-bottom: 1em;">
+        <legend style=" font-size: 28px; ">|Postal Address|</legend>
+        <label for="" style="margin-left: -70.5px;">Address1</label>
+        <font color="red">*</font>
+        <input type="text" name="" id="">
+        <label for="" style="margin-left: -5px;">Add.2</label>
+        <input type="text" name="" id="">
+        <label for="" style="margin-left: -3.5px;">Pincode</label>       
+        <font color="red">*</font>
+        <input type="text" name="" id="">
+       </fieldset>
+    </div>
+</div>
+<div class="col-sm-12">
+
+    <button type="button00" id="submitButton" class="btn btn-danger00" onclick="document.getElementById('pls').click();">Submit</button>
+    </div>
+
+</section>
+<footer class="footer">
+    <div class="fcontainer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Req. For Blood</h4>
+                    <ul>
+                        <li><a href="A_BloodAv.html">Blood Availability</a></li>
+                        <li><a href="A_BBDirectory.html">Blood Bank Directory</a></li>
+                        <li><a href="A_TCondition.html">Term and Conditions</a></li>
+                        <li><a href="A_PPolicy.html">Privacy & Policy</a></li>
+                    </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Want to Donate</h4>
+                    <ul>
+                        <li><a href="A_Reg.html">Appointment for Blood Bank</a></li>
+                        <li><a href="A_DLogin.html">Donor Login</a></li>
+                        <li><a href="A_AboutBD.html">About Blood Donation</a></li>
+                    </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Blood Bank Login</h4>
+                    <ul>
+                        <li><a href="A_BLogin.html">Blood Bank Login</a></li>
+                        <li><a href="A_AddBB.html">Add Your Blood Bank</a></li>
+                        
+                    </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Contact</h4>
+                    <ul>
+                        
+                        <li><span>Call now</span>
+                            <p>
+                                <a href="tel:+918448116245">+91-8299505527</a>
+                            </p>
+                        </li>
+                        <li><span>Whats App</span>
+                            <p>
+                                <a href="tel:+919451706534">+91-9451706534</a>
+                            </p>
+                        </li>
+                        <li><span>Email</span>
+                            <p>
+                                <a href="mail to:aksharma0823@gmail.com">aksharma0823@gmail.com</a>
+                            </p>
+                        </li>
+                    </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4><img src="img/profile.jpg" style= "border-radius: 15px;
+                float: right;
+                margin-top: -54px;
+                margin-right: -150px;
+                height: 90%;
+                width: 85%; 
+                opacity:0.3;">
+                    <div class="Social-links">
+                        <a href="https://www.facebook.com/akash.sharma082"><i class="fab fa-facebook-f" ></i></a>
+                        <a href="https://twitter.com/MrAkaSharma45"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/mrakasharma"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/akash-sharma-8611bb193"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-google-play"></i></a>
+                        
+                    </div>
+                    
+            </div>
+            <p class="text-footer" style="color: white" >
+              Designed and Developed by Akash Sharma. @Copyright 2022 www.lineage.com - All Rights Reserverd. 
+                </p>
+        </div>
+        
+    </div>
+</footer>
+<hr>
+</body>
+</html> 

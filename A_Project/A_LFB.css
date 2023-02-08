@@ -1,0 +1,62 @@
+.firstSec{
+    height: 100%;
+    padding: 2px 4px;
+}
+
+
+  .text-big{
+    box-sizing: border-box;
+    font-size: 40px;
+    font-style: italic ;
+    width: 100%;
+    color: antiquewhite;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 10px;
+  }
+  
+  .btn {
+    padding: 30px 35px;
+    margin: 27px 8px;
+    font-size: 23px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-sm {
+    padding: 4px 10px;
+    vertical-align: middle;
+    font-size: 81%;
+  }
+
+  .text-big1{
+    margin-top: 10px;
+    font-size: 38px;
+    color: white;
+    margin-top: -0.5px;
+    font-style: italic ;
+  }
+  .text-small1{
+    font-size: 20px;
+    color: white;
+    margin-top: 1px;
+    font-family: cursive;
+  }
+  .R1image img {
+    width: 380px;
+    height: 280px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 26px;
+  }
+  .R2image img {
+    width: 425px;
+    height: 280px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 26px;
+  }
+  

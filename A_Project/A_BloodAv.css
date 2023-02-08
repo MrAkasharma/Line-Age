@@ -1,0 +1,89 @@
+*{
+    color: black;
+    text-decoration: none;
+}
+
+section{
+    background:rgba(0, 0, 0, 0.8)url('img/bg1.jpeg');
+       background-blend-mode: darken; 
+       font-family: poppins; 
+       padding: 50px 60px;
+}
+
+
+.reg-container{
+    height: 430px;
+    width: 70%;
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: 15%;
+
+}
+.reg-container-h1{
+    padding-top: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.reg-container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+form .user-details .input-box{
+    width: calc(100%/2 - 20px);
+}
+.user-details .input-box input{
+    height:45px;
+    width: 100%;
+}
+.user-details .input-box select{
+    height:45px;
+    width: 100%;
+}
+
+.regnew{
+    height: 40px;
+    width: 98%;
+    margin: 10px;
+    background-color: rgb(229 193 193);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.5rem;
+}
+label{
+    
+    padding-block-end: 20px;
+    /* display: inline; */
+    /* flex-direction: column; */
+    font-weight: bold;
+}
+
+input[type=text],[type=password],[type=email],[type=date],select{
+    display: inline-block;
+    padding: 10px 12px;
+    width: 40%;
+    margin: 8px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    outline: none;
+
+}
+button[type=submit]{
+    background-color: white;
+    border: 2px solid brown;
+    border-radius: 5px;
+    padding: 17px 28px;
+    margin-top: 20px;
+    margin-left: 430px;
+    font-size: 1.2rem;
+    width: 15%;
+}
+button[type=submit]:hover{
+    background:rgba(255, 255, 255, 0.8)url('img/bg1.jpeg');
+       background-blend-mode: darken; 
+    transition-duration: 0.9s;
+    color: white;
+}

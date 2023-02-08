@@ -1,0 +1,54 @@
+section{
+    background:rgba(0, 0, 0, 0.7)url('img/bg1.jpeg');
+    background-blend-mode: darken;
+    padding: 50px;
+}
+
+.regnew{
+    height: 40px;
+    width: 100%;
+    margin: 0px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    color: #000;
+    border: 1px solid rgba(255, 255, 255);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+
+}
+.contain-1{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 5px;
+    left: 20%;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    backdrop-filter: blur(10px);
+    margin-left: 200px;
+
+}
+.contain-1 form{
+   padding: 30px;
+}
+input[type=email],[type=password],[type=submit]{
+    padding: 10px 12px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    outline: none;
+}
+input[type=submit]:hover{
+    background:rgba(0, 0, 0, 0.7)url('img/bg1.jpeg');
+    background-blend-mode: darken;
+    color: white;
+}
+

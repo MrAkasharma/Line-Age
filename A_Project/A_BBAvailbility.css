@@ -1,0 +1,136 @@
+element.style {
+    width: 1173px;
+}
+
+table.dataTable {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+section{
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 16px;
+    color: #292929;
+    font-weight: 400;
+    background: #fff;
+}
+
+
+element.style {
+    width: 41px;
+    min-width: 41px;
+}
+table.dataTable thead .sorting_asc {
+    background-image: url(../images/sort_asc.png);
+}
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc {
+    cursor: pointer;
+    *cursor: hand;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-bottom-width: 2px;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 1px solid #111;
+}
+table.dataTable thead th, table.dataTable tfoot th {
+    font-weight: bold;
+}
+table.dataTable, table.dataTable th, table.dataTable td {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+th {
+    text-align: left;
+}
+td, th {
+    padding: 0;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.text-danger {
+    color: #a94442;
+}
+
+h3{
+    position: relative;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    margin: 0;
+    background: 0 0;
+    line-height: 1.4em;
+    margin-left: 113px;
+}
+.h3, h3 {
+    font-size: 38px;
+}
+
+
+.bgtablered {
+    background: #bf2229;
+}
+
+.bgtablered {
+    background: #bf2229;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="A_Index.css">
+        <link rel="stylesheet" href="A_Reg.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <title>Line Age - A way to Minimize Blood Doner & Receivers</title>
+    </head>
+    <body>
+        <header>
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <div class="logo"><img src="img/logo.jpg" alt="logo">
+                <li><a href="A_Index.html">Home</a></li>
+                <li><a href="A_DLogin.html"> Login </a></li>
+                <li><a href="A_Reg.html">Registration</a></li>
+                <li><a href="A_Login.html">Admin</a></li>
+                <li><a href="A_About.html">About Us</a></li>
+                <li><a href="A_Contact.html">Contact Us</a></li>
+            </ul>
+            <div class="rightNav">
+                <input type="text" name="search" id="search">
+                <a href="https://www.google.com/"><button class="btn btn-sm">Search</button></a>
+            </div>
+        </nav>
+    </header>
+    <section><hr>
+    <div class="container">
+        <div class="title" style="font-size:2.00rem; font-style: oblique; font-weight:550;"> Donor Registration Form</div>
+        <p class=" text-danger" style="font-size:1.10rem; color:darkred; font-weight:540; font-style: oblique;"> Donating blood is an act of solidarity.
+             Join the effort and save lives.</p>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Age</span>
+                <input type="text" placeholder="Enter your Age" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Gender</span>
+                <select name="donorGender" tabindex="1" class="form-control"><option value="-1">Select Gender</option>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                    <option value="T">Transgender</option></select>
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter your number" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Blood Group</span>
+              
+              <select name="bloodgroup" tabindex="1" class="form-control"><option value="-1">Select Your Blood Group</option>
+												
+                <option value="18">AB-Ve</option>
+                <option value="17">AB+Ve</option>
+                <option value="12">A-Ve</option>
+                <option value="11">A+Ve</option>
+                <option value="14">B-Ve</option>
+                <option value="13">B+Ve</option>
+                <option value="23">Oh-VE</option>
+                <option value="22">Oh+VE</option>
+                <option value="16">O-Ve</option>
+                <option value="15">O+Ve</option>
+                <option value="all">All Blood Groups</option></select>
+              </div>
+              <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" placeholder="Enter Your Address" required>
+              </div>
+              <div class="input-box">
+                <span class="details">State</span>
+                <select name="donorState" tabindex="1" onchange="loadAddressDistrictList(this.value)" class="form-control"><option value="-1">Select State</option>	
+                <option value="99">Uttar Pradesh</option>
+              </div>
+              <div class="input-box">
+                <span class="details">District/City</span>
+                <select name="addressDistrict" id="addressDistList" onchange="loadNewBBList(this.value)" tabindex="1" class="form-control">
+										<option value="-1">Select District</option>
+									</select>
+                                    <div id="enterdistrict" style="display:none;">
+                                        <h4 class="text-danger">Please enter your district</h4>
+                                        <option value="#">Varanasi</option>
+                                        <option value="#">Mirzapur</option>
+                                    </div>
+              </div>
+              <div class="input-box">
+                <span class="details">Govt id</span>
+                <select tabindex="1" name="goiid" onchange="goiddiv()" class="form-control">
+                    <option value="-1">Select Value</option>
+                    <option value="7#18#3">Aadhar Number</option>
+                    <option value="4#18#2">Driving License</option>
+                    <option value="1#10#2">PAN  </option>
+                    <option value="2#8#2">Passport Number</option>
+                    <option value="3#18#2">Voter Id</option>
+                    </select>
+                </div>
+
+              <div class=" col-12 col-sm-6" id="goinumber" style="display: none;"> 
+                <label for="password" class="control-label">Govt ID Number</label>
+                <input type="text" name="goinumber" class="form-control" tabindex="1" maxlength="20" placeholder="Govt ID Number">
+                <div id="entergoi" style="display:none;">
+				<h4 class="text-danger">Please enter your GOvt ID number</h4>
+				</div>
+                </div>
+
+
+
+              <div class="row">
+              <div class="col-sm-12">
+                <h4 class="modal-title text-danger" id="myModalLabel" style="align:center;">Willing to Donate?&nbsp;&nbsp;Choose from your Nearby Bloodbanks</h4><br>
+                 </div>
+                </div>
+            
+                <div class="row1">
+
+
+                    <div class="bbn">
+                        <label for="Pincode" class="control-label">Blood Bank Name</label> 
+                           <select tabindex="1" id="bbnamelist" name="bloodBankName" class="form-control">
+                            <option value="-1">Select Blood Bank</option>
+                        </select>
+                    <div id="enterbloodbankname" style="display:none;">
+                                <h4 class="text-danger">Please enter your blood bank name</h4>
+                            </div>	 
+
+                    </div>
+   
+             </div>
+
+             <div class=" col-12 col-sm-6" style="margin-left: 271px;margin-top: -70px;"> 
+                <label for="password" class="control-label">Tentative Date</label>
+                <input class="form-control hasDatepicker" type="date" name="tentdob" id="datepicker1" tabindex="1" placeholder="dd-mm-yyyy" onkeydown="return false">
+              
+                </div>
+                 
+             </div>
+            
+            
+            <div class="col-12 col-sm-12">
+                <input name="chkConditions" type="checkbox" tabindex="1" value="1" checked="checked"> 
+                <label>I hereby accept <span id="currentLocation" class="label"><a id="btnShow">Terms &amp; Conditions</a></span> of registering as blood donor.</label>
+               <div id="dTerms" style="display: none;">
+                             <h4 class="text-danger">Please accept terms and conditions</h4>
+                             </div>
+        </div>
+            <div class="button">
+              <input type="submit" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section><hr>
+
+
+    <footer class="footer">
+        <div class="fcontainer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Req. For Blood</h4>
+                        <ul>
+                            <li><a href="A_BloodAv.html">Blood Availability</a></li>
+                                <li><a href="A_BBDirectory.html">Blood Bank Directory</a></li>
+                                <li><a href="A_TCondition.html">Term and Conditions</a></li>
+                                <li><a href="A_PPolicy.html">Privacy & Policy</a></li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Want to Donate</h4>
+                        <ul>
+                            <li><a href="A_Reg.html">Appointment for Blood Bank</a></li>
+                            <li><a href="A_DLogin.html">Donor Login</a></li>
+                            <li><a href="A_AboutBD.html">About Blood Donation</a></li>
+                        </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Blood Bank Login</h4>
+                        <ul>
+                            <li><a href="A_BBLogin.html">Blood Bank Login</a></li>
+                            <li><a href="A_AddBB.html">Add Your Blood Bank</a></li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Contact</h4>
+                        <ul>
+                            
+                            <li><span>Call now</span>
+                                <p>
+                                    <a href="tel:+918448116245">+91-8299505527</a>
+                                </p>
+                            </li>
+                            <li><span>Whats App</span>
+                                <p>
+                                    <a href="tel:+919451706534">+91-9451706534</a>
+                                </p>
+                            </li>
+                            <li><span>Email</span>
+                                <p>
+                                    <a href="mail to:aksharma0823@gmail.com">aksharma0823@gmail.com</a>
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4><img src="img/profile.jpg" style= "border-radius: 15px;
+                    float: right;  margin-top: -54px;  margin-right: -150px;  height: 95%;  width: 83%;  opacity:0.4;">
+                        <div class="Social-links">
+                            <a href="#"><i class="fab fa-facebook-f" ></i></a>
+                            <a href="www.instagram.com/mrakasharma"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-google-play"></i></a>
+                            
+                        </div>
+                        
+                </div>
+                <p class="text-footer" style="color: white" >
+                  Designed and Developed by Akash Sharma. @Copyright 2022 www.lineage.com - All Rights Reserverd. 
+                    </p>
+            </div>
+            
+        </div>
+    </footer>
+    <hr>
+    </body>
+</html> 

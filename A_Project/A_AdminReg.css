@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+section{
+  font-family: 'poppins';
+  background:rgba(0, 0, 0, 0.7)url('img/bg1.jpeg');
+  background-blend-mode: darken; 
+  line-height: 1.8;
+}
+
+a{
+  text-decoration: none;
+}
+
+#container{
+  margin: auto;
+  max-width: 450px;
+  padding: 24px;
+}
+
+.form-wrap{
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  padding: 15px 25px;
+  color: #333;
+  border-top: linear-gradient(135deg, #5b0b0b, #eee);
+  border-radius: 05px;
+}
+
+.form-wrap h1,
+.form-wrap p{
+  text-align: center;
+}
+
+.form-wrap .form-group{
+  margin-top: 15px;
+}
+
+.form-wrap .form-group label{
+  display: block;
+  color: #666;
+}
+
+.form-wrap .form-group input{
+  width: 95%;
+  padding: 10px;
+  border: #ddd 1px solid;
+  border-radius: 5px;
+}
+
+.form-wrap button{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #5b0b0b, #eee);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #000000;
+  font-family: 'poppins';
+  font-size: 15px;
+  transition: 1s;
+}
+
+.form-wrap button:hover{
+    background:rgba(0, 0, 0, 0.7)url('img/bg1.jpeg');
+    background-blend-mode: darken;
+  transition: 1s;
+}
+
+.form-wrap .bottom-text{
+  font-size: 13px;
+  margin-top: 20px;
+}

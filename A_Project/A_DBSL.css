@@ -1,0 +1,67 @@
+section{
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 16px;
+    color: #292929;
+    background: #fff;
+}
+
+.about1{
+    margin-left: 10px;
+}
+
+
+section{
+    font-family: 'Droid Sans',sans-serif;
+    font-size: 16px;
+    color: #292929;
+    background: #fff;
+}
+
+.panel-group .panel {
+margin-bottom: 0;
+border-radius: 4px;
+}
+
+.panel-body {
+padding: 15px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: italic;
+}
+
+p {
+position: relative;
+clear: both;
+}
+
+.panel-danger>.panel-heading {
+color: #701716;
+font-style: italic;
+background-color: #f2dede;
+border-color: #ebccd1;
+}
+
+.panel-group .panel-heading {
+border-bottom: 0;
+}
+
+.panel-heading {
+font-family: Algerian;
+font-size: 330%;
+padding: 10px 15px;
+border-bottom: 1px solid transparent;
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+}  
+
+.panel {
+border: 2px solid silver ;
+border-radius: 4px;
+}
+
+.container {
+padding: 40px;
+margin-right: auto;
+margin-left: auto;
+width: 1410px;
+height:650px;
+}

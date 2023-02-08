@@ -1,0 +1,109 @@
+section{
+    background-image: url("img/bg1.jpeg");
+    background-blend-mode: darken;
+}
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8
+{    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    padding: 30px;
+    min-height: 700px; 
+    height: 100%;
+}
+.bgimg-2 {
+    padding: 30px;
+    min-height: 700px;  
+    height: 100%;
+    
+}
+.bgimg-3 {
+    padding: 30px;
+    min-height: 700px;  
+    height: 100%;
+}
+.bgimg-4 {
+    padding: 30px;
+    min-height: 700px; 
+    height: 100%;
+}
+.bgimg-5 {
+    padding: 30px;
+    min-height: 700px;  
+    height: 100%;
+}
+.bgimg-6 {
+    padding: 30px;
+    min-height: 700px; 
+    height: 100%;
+}
+.bgimg-7 {
+    padding: 30px;
+    min-height: 700px;  
+    height: 80%;
+}
+.bgimg-8 {
+    padding: 30px;
+    min-height: 700px;  
+    height: 100%;
+}
+.big-letter{
+    color: #fff;
+    font-size: 3.5rem;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.written-cont{
+    width: 80%;
+    height: 480px;
+    position: absolute;
+    background-color: rbga(255,255,255,0.9);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    left: 10%;
+    font-size: 2.0rem;
+    padding: 20px;
+    color: whitesmoke;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    backdrop-filter: blur(10px);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+
+}
+button[type=submit]{
+    position: relative;
+    background-color: rgb(243, 154, 154);
+    border: 2px solid brown;
+    color: brown;
+    border-radius: 5px;
+    padding: 17px 28px;
+    margin-top: 35%;
+    margin-left: 200px;
+    font-size: 1.2rem;
+    
+    }
+
+    button[type=submit] a{
+        text-decoration: none;
+        color:brown;
+    }
+    button[type=submit] a:hover{
+        color: #fff;
+    }
+button[type=submit]:hover{
+    text-decoration: none;
+    background-color: brown;
+    transition-duration: 0.9s;
+    color: #fff;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.4), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+*{
+    text-decoration: none;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <link rel="stylesheet" href="A_Index.css">
+        <link rel="stylesheet" href="A_BBDirectory.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <title>Line Age - A way to Minimize Blood Doner & Receivers</title>
+    </head>
+    <body>
+        <header>
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <div class="logo"><img src="img/logo.jpg" alt="logo">
+                <li><a href="A_Index.html">Home</a></li>
+                <li><a href="A_DLogin.html">Login </a></li>
+                <li><a href="A_Reg.html">Registration</a></li>
+                <li><a href="A_Login.html">Admin</a></li>
+                <li><a href="A_About.html">About Us</a></li>
+                <li><a href="A_Contact.html">Contact Us</a></li>
+            </ul>
+            <div class="rightNav">
+                <input type="text" name="search" id="search">
+                <a href="https://www.google.com/"><button class="btn btn-sm">Search</button></a>
+            </div>
+        </nav>
+    </header>
+    <section><hr>
+        <div class="container wrapper ">
+            <div class="page-header">
+                <h3 class="text-danger">Nearest Blood Bank(BB)/ Blood Storage Unit(BSU)</h3>
+    
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-md-3">
+                    <select id="donorAddStateCode" class="form-control" onchange="loadDistrictList(this.value)">
+                        <option value="-1">Uttar Pradesh</option>
+                        <option value="99">Uttar Pradesh</option>	
+                </div>
+    
+                <div class="col-md-3 ">
+                    <select id="distList" class="form-control" onchange="setDistrictCode(this.value)">
+                        <option value="-1">Varanasi</option>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="easy-autocomplete" style="width: 350px;"><input type="text" class="form-control" 
+                        id="txtBbname" placeholder="Blood Bank or Hospital Name" autocomplete="off">
+                        <div class="easy-autocomplete-container" id="eac-container-txtBbname"><ul></ul></div></div>
+                </div>
+                <div class="col-md-2" align="">
+                    <button type="button1" class="btn1 btn1-danger" onclick="getBloodBankList()">Search</button>
+                </div><br><br><br>
+    
+                <br> <br>
+    
+            </div>
+    
+            <div class="row">
+                <div id="bblist">
+                    <h5 align="left">
+                        <span id="latlon" class="label label-info toggle2">
+                            Showing Blood Banks/Blood Storage Units as per the selection from the list</span>
+                        </h5>					
+                </div>
+                </div>
+    
+                <div id="example-table_wrapper" class="dataTables_wrapper no-footer">
+                    <table id="example-table" class="table table-bordered table-hover table-striped dt-responsive  dataTable no-footer dtr-inline" style="width:100%" role="grid" aria-describedby="example-table_info">
+                    <thead class="bgtablered">
+                        <tr role="row"><th class="all sorting" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="S.No.: activate to sort column ascending" style="width: 5%;">S.No.</th><th class="all sorting_asc" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending" style="width: 25%;">Name</th>
+                        <th class="desktop sorting" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="width: 20%;">Address</th><th class="desktop sorting" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 10%;">Phone</th>
+                        <th class="desktop sorting" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 10%;">Email</th><th class="desktop sorting" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="Category: activate to sort column ascending" style="width: 10%;">Category</th>
+                        <th class="desktop sorting" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="Distance (km): activate to sort column ascending" style="width: 10%;">Distance (km)</th>
+                        <th class="desktop sorting" tabindex="0" aria-controls="example-table" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending" style="width: 5%;">Type</th></tr></thead>
+                    <tbody>
+                    <tr role="row" class="odd"><td class="" tabindex="0">17</td><td class="sorting_1">  S.S.P.G. Divisional District Hospital, Varanasi</td>
+                        <td>Kabirchaura, Varanasi, Varanasi, Dist. Varanasi</td><td>9935112317</td><td>bbsspgvaranasi@gmail.com</td>
+                        <td>Govt.</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=283727"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank"> Stock</a></td></tr>
+                        <tr role="row" class="even"><td class="" tabindex="0">1</td><td class="sorting_1">Blood Centre Apex Hospital</td><td>Apex Hospital Component Blood Bank. (Apex Wel-care Trust) N-7/2, A-5, DLW, Hydil Road, , Varanasi, Dist. Varanasi</td><td>9415304103,9415304106,0542-2317414</td><td></td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=1735"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=1735"> Stock</a></td></tr>
+                        <tr role="row" class="odd"><td class="" tabindex="0">2</td><td class="sorting_1">Blood Centre Heritage  Hospital</td><td>Heritage Hospital Ltd. Lanka, Varanasi, Dist. Varanasi</td><td>05422368888, 9335376604</td><td>infohhl@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=715"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=715"> Stock</a></td></tr>
+                        <tr role="row" class="even"><td class="" tabindex="0">3</td><td class="sorting_1">Blood Centre Jawahar Pathology</td><td>Jawahar Pathology &amp; Blood Bank, Padeypur, Varanasi, Dist. Varanasi</td><td>NA</td><td>bhargavatraumahospital@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=722"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=722"> Stock</a></td></tr>
+                        <tr role="row" class="odd"><td class="" tabindex="0">4</td><td class="sorting_1">Blood Centre Pt.Deen Dayal Upadhyaya Hospital</td><td>Pt. DDU Govt. Hospital, Pandeypur, near Mahaveer Mandir, VARANASI, Dist. Varanasi</td><td>7408418701,9935819332</td><td>pddh.varanasi@gmail.com</td><td>Govt.</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=1740"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=1740"> Stock</a></td></tr><tr role="row" class="even"><td class="" tabindex="0">5</td><td class="sorting_1">Blood Centre Ssl Hospital Ims Bhu</td><td>SSL Hospital, IMS, BHU, , Varanasi, Dist. Varanasi</td><td>9839080939,9415223888,0542-2367568</td><td>bloodbank953@gmail.com</td><td>Govt.</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=743"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=743"> Stock</a></td></tr>
+                        <tr role="row" class="odd"><td class="" tabindex="0">6</td><td class="sorting_1">Ford Blood Centre</td><td>Ford hospital bamanghat, Varansi, Dist. Varanasi</td><td>9369028043</td><td>fordhospitalbloodbank@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=282588"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=282588"> Stock</a></td></tr><tr role="row" class="even"><td class="" tabindex="0">7</td><td class="sorting_1">GANGA SEWA SADAN BLOOD CENTRE</td><td>CHANDPUR CHAURAHA, CHANDPUR INDUSTRIAL ESTATE, VARANASI , Varanasi, Dist. Varanasi</td><td>9935679799</td><td>gangasewasadanbloodcentre@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=283959"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=283959"> Stock</a></td></tr>
+                        <tr role="row" class="odd"><td class="" tabindex="0">8</td><td class="sorting_1">Heritage Institute Of Medical Sciences Blood Centre</td><td>3rd Floor, Near Mohan Sarai, Ram Nagar Byepass, Bhadwar, Varanasi, Dist. Varanasi</td><td>9415226197,0542-2368888, 9918889444</td><td>mahendravns208@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=280207"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=280207"> Stock</a></td></tr>
+                        <tr role="row" class="even"><td class="" tabindex="0">9</td><td class="sorting_1">Homi Bhabha Cancer Hospital Blood Centre</td><td>HOMI BHABHA CANCER HOSPITAL, LAHARTARA, VARANASI, PO DRM OFFICE, Varanasi, Dist. Varanasi</td><td>9151819177</td><td>Dtmhbchvaranasi@gmail.com</td><td>Govt.</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=283400"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=283400"> Stock</a></td></tr><tr role="row" class="odd"><td class="" tabindex="0">10</td><td class="sorting_1">Indian Medical Association Banaras</td><td>C-7/31, IMA HOUSE, Varansi, Dist. Varanasi</td><td>7905666615</td><td>imabanaras@gmail.com</td><td>Charitable/Vol</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=282698"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=282698"> Stock</a></td></tr>
+                        <tr role="row" class="even"><td class="" tabindex="0">11</td><td class="sorting_1">INDRA HOSPITAL COMPONENT BLOOD BANK</td><td>Akhari bypass NH2 road varanasi, Varanasi, Dist. Varanasi</td><td>7080400808</td><td>Icomponentbloodbank@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=283721"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=283721"> Stock</a></td></tr><tr role="row" class="odd"><td class="" tabindex="0">12</td><td class="sorting_1">Lions Vishal Blood Centre, I.M.A Blood Centre</td><td>Lahuraveer Varanasi, Varanasi, Dist. Varanasi</td><td>9415202999,9415373011,9628000005</td><td>imabloodbankvns@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=721"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=721"> Stock</a></td></tr>
+                        <tr role="row" class="even"><td class="" tabindex="0">13</td><td class="sorting_1">Mahamana Pandit Madan Mohan Malaviya Cancer Centre  Blood Centre Varanasi </td><td>bagiya nariya road,BHU campus varanasi, Dist. Varanasi</td><td>7905711071</td><td>mittalsid101@gmail.com</td><td>Govt.</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=283197"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=283197"> Stock</a></td></tr><tr role="row" class="odd"><td class="" tabindex="0">14</td><td class="sorting_1">Maxwell  Blood Centre</td><td>NH2, Near toll plaza Dafi, Varansi, Dist. Varanasi</td><td>7570904844</td><td>maxwellbloodbank@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=282638"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=282638"> Stock</a></td></tr>
+                        <tr role="row" class="even"><td class="" tabindex="0">15</td><td class="sorting_1">Popular Medicare Limited Hospital Blood Centre</td><td>N-10/60, A-2, DLA Road kakarmatta, Varansi, Dist. Varanasi</td><td>9839840311, 9936899001</td><td>popularbloodbank2016@gmail.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=280208"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=280208"> Stock</a></td></tr><tr role="row" class="odd"><td class="" tabindex="0">16</td><td class="sorting_1">Shubham Hospital Component Blood Center Varanasi </td><td>S-8/108-F-2,F5A Maqbool Alam Road Khajuri, Varanasi, Dist. Varanasi</td><td>9369352137</td><td>bloodbank@shubhamhospitals.com</td><td>Private</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=2730"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=2730"> Stock</a></td></tr>
+                        <tr role="row" class="even"><td class="" tabindex="0">18</td><td class="sorting_1">Trauma Centre &amp; Superspeciality Hospital Blood Bank</td><td>Samne ghat road, Lanka, Varanasi, Varanasi, Dist. Varanasi</td><td>9911854902</td><td>bloodbanktraumacentreimsbhu@gmail.com</td><td>Govt.</td><td>-</td><td><a title="View Camps" class="anchorCamp" target="_blank" href="/BLDAHIMS/bloodbank/campSchedule.cnt?GETNEARBYCAMPS&amp;hospitalCode=283786"> Camps</a><br><br><a title="View Stock" class="anchorStock" target="_blank" href="/BLDAHIMS/bloodbank/stockAvailability.cnt?GETNEARBYSTOCKDETAILS&amp;nearby=2&amp;searchMode=2&amp;distId=197&amp;stateId=99&amp;hospitalCode=283786"> Stock</a></td></tr></tbody>
+                    
+                </table><br><br>
+                <div class="dataTables_info" id="example-table_info" role="status" aria-live="polite">Showing 1 to 18 of 18 entries</div><br><br>
+            </div>
+            </div>
+    </section><hr>
+
+    <footer class="footer">
+        <div class="fcontainer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Req. For Blood</h4>
+                        <ul>
+                            <li><a href="A_BloodAv.html">Blood Availability</a></li>
+                                <li><a href="A_BBDirectory.html">Blood Bank Directory</a></li>
+                                <li><a href="A_TCondition.html">Term and Conditions</a></li>
+                                <li><a href="A_PPolicy.html">Privacy & Policy</a></li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Want to Donate</h4>
+                        <ul>
+                            <li><a href="A_Reg.html">Appointment for Blood Bank</a></li>
+                            <li><a href="A_DLogin.html">Donor Login</a></li>
+                            <li><a href="A_AboutBD.html">About Blood Donation</a></li>
+                        </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Blood Bank Login</h4>
+                        <ul>
+                            <li><a href="A_BLogin.html">Blood Bank Login</a></li>
+                            <li><a href="A_AddBB.html">Add Your Blood Bank</a></li>
+                            
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Contact</h4>
+                        <ul>
+                            
+                            <li><span>Call now</span>
+                                <p>
+                                    <a href="tel:+918448116245">+91-8299505527</a>
+                                </p>
+                            </li>
+                            <li><span>Whats App</span>
+                                <p>
+                                    <a href="tel:+919451706534">+91-9451706534</a>
+                                </p>
+                            </li>
+                            <li><span>Email</span>
+                                <p>
+                                    <a href="mail to:aksharma0823@gmail.com">aksharma0823@gmail.com</a>
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4><img src="img/profile.jpg" style= "border-radius: 15px;
+                    float: right;margin-top: -54px;margin-right: -150px;height: 95%;width: 83%;  opacity:0.4;">
+                        <div class="Social-links">
+                            <a href="#"><i class="fab fa-facebook-f" ></i></a>
+                            <a href="www.instagram.com/mrakasharma"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-google-play"></i></a>
+                            
+                        </div>
+                        
+                </div>
+                <p class="text-footer" style="color: white" >
+                  Designed and Developed by Akash Sharma. @Copyright 2022 www.lineage.com - All Rights Reserverd. 
+                    </p>
+            </div>
+            
+        </div>
+    </footer>
+    <hr>
+    </body>
+</html> 
